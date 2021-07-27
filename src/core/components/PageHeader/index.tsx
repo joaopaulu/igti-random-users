@@ -7,7 +7,7 @@ const PageHeader = () => {
     <header className="page-header">
       <div className="top-bar-container">
         <Link to="/" className="nav-logo-text">
-          <h4>DS Client</h4>
+          <h4>IGTI Random User </h4>
         </Link>
         <ul className="main-menu">
           <li>
@@ -17,7 +17,7 @@ const PageHeader = () => {
           </li>
           <li>
             <NavLink to="/clients" activeClassName="active">
-              CLIENTES
+              USUÁRIOS
             </NavLink>
           </li>
         </ul>

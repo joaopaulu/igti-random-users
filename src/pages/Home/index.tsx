@@ -1,6 +1,6 @@
-import React from 'react';
+import hero from 'core/assets/images/main.svg';
 import ButtonIcon from 'core/components/Buttonicon';
-import hero from 'core/assets/images/hero.png';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
@@ -9,12 +9,11 @@ const Home = () => {
     <div className="row home-content">
       <div className="col-6 home-text">
         <h1 className="text-title">
-          Develop great <br /> business leaders
+          API <br /> Random User React
         </h1>
         <p className="text-subtitle">
-          Vitae congue mauris rhoncus aenean vel elit scelerisque. Consequat
-          nisl vel pretium lectus quam id leo in vitae. Dictum sit amet justo
-          donec enim diam vulputate.
+          Consulta aleatória de usuários de código aberto gratuita.
+          <a href="https://randomuser.me">https://randomuser.me/</a>
         </p>
         <Link to="/clients">
           <ButtonIcon text="inicie agora a sua busca" />
