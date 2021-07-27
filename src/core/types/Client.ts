@@ -4,7 +4,7 @@ export type clientsResponse = {
 };
 
 export type Client = {
-  id: number;
+  login: Login;
   gender: string;
   name: Name;
   location: Location;
@@ -32,4 +32,8 @@ export type Dob = {
 
 export type Picture = {
   large: string;
+};
+
+export type Login = {
+  uuid: string;
 };

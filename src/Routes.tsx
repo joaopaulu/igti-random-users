@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PageHeader from './core/components/PageHeader';
 import Clients from './pages/Clients';

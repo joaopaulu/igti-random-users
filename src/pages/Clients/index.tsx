@@ -30,7 +30,7 @@ const Clients = () => {
           <ClientCardLoader />
         ) : (
           clientsResponse?.results.map(client => (
-            <ClientCard client={client} key={client.id} />
+            <ClientCard client={client} key={client.login.uuid} />
           ))
         )}
       </div>
