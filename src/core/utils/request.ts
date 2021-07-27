@@ -7,7 +7,7 @@ type RequestParams = {
   params?: object;
 };
 
-const BASE_URL = 'https://randomuser.me/api/';
+const BASE_URL = 'https://randomuser.me';
 
 const makeRequest = ({ method = 'GET', url, data, params }: RequestParams) => {
   return axios({

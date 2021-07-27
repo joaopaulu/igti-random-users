@@ -31,5 +31,5 @@ export type Dob = {
 };
 
 export type Picture = {
-  medium: string;
+  large: string;
 };

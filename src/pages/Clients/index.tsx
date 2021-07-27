@@ -1,3 +1,4 @@
+import Pagination from 'core/components/Pagination';
 import { clientsResponse } from 'core/types/Client';
 import makeRequest from 'core/utils/request';
 import React, { useEffect, useState } from 'react';
@@ -8,17 +9,18 @@ import './styles.scss';
 const Clients = () => {
   const [clientsResponse, setclientsResponse] = useState<clientsResponse>();
   const [isLoading, setIsLoading] = useState(false);
+  const [activePage, setActivePage] = useState(0);
 
   useEffect(() => {
     const params = {
-      page: 0,
-      linesPerPage: 12,
+      page: activePage,
+      results: 3,
     };
     setIsLoading(true);
-    makeRequest({ url: '/?seed=javascript&results=5&nat=BR&noinfo', params })
+    makeRequest({ url: '/api', params })
       .then(response => setclientsResponse(response.data))
       .finally(() => setIsLoading(false));
-  }, []);
+  }, [activePage]);
 
   return (
     <div className="client-container">
@@ -32,6 +34,12 @@ const Clients = () => {
           ))
         )}
       </div>
+      {clientsResponse && (
+        <Pagination
+          totalPages={clientsResponse.totalPages}
+          onChange={page => setActivePage(page)}
+        />
+      )}
     </div>
   );
 };

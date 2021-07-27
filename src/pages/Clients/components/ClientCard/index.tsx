@@ -1,24 +1,15 @@
 import { Client } from 'core/types/Client';
-import Moment from 'moment';
 import './styles.scss';
 
 type Props = {
   client: Client;
 };
 
-const formatPrice = (price: number) => {
-  return new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 }).format(
-    price,
-  );
-};
-
-Moment.locale('pt-BR');
-
 const ClientCard = ({ client }: Props) => (
   <div className="row card-base border-radius-10 client-card">
     <div className="col-2 image-info">
       <img
-        src={client.picture.medium}
+        src={client.picture.large}
         alt={client.name.first}
         className="client-card-image"
       />
