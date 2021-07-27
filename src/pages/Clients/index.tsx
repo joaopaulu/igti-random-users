@@ -15,14 +15,14 @@ const Clients = () => {
       linesPerPage: 12,
     };
     setIsLoading(true);
-    makeRequest({ url: '/?seed=javascript&results=100&nat=BR&noinfo', params })
+    makeRequest({ url: '/?seed=javascript&results=5&nat=BR&noinfo', params })
       .then(response => setclientsResponse(response.data))
       .finally(() => setIsLoading(false));
   }, []);
 
   return (
     <div className="client-container">
-      <h1 className="client-title">Nossos Clientes</h1>
+      <h1 className="client-title">Usuários Aleatórios</h1>
       <div className="client-products">
         {isLoading ? (
           <ClientCardLoader />

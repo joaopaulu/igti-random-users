@@ -13,7 +13,9 @@ const Home = () => {
         </h1>
         <p className="text-subtitle">
           Consulta aleatória de usuários de código aberto gratuita.
-          <a href="https://randomuser.me">https://randomuser.me/</a>
+          <a href="https://randomuser.me" target="_blank" rel="noreferrer">
+            https://randomuser.me/
+          </a>
         </p>
         <Link to="/clients">
           <ButtonIcon text="inicie agora a sua busca" />
